@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+touch ~/.config/tmux/test.log
 
 if [[ $XDG_SESSION_TYPE =~ wayland ]]; then
     echo Sourcing wayland/clipboard.tmux >> ~/.config/tmux/test.log
