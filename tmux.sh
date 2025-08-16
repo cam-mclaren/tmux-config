@@ -12,7 +12,7 @@ if [[ $XDG_SESSION_TYPE =~ x11 ]]; then
     tmux source-file ~/.config/tmux/x11/clipboard.tmux
 fi
 
-test -e /proc/sys/fs/binfmt_misc/WSLInterop
+test -e /proc/sys/fs/binfmt_misc/WSLInterop || [[ -n $WSL_INTEROP ]]
 is_wsl=$? 
 if [[ $is_wsl == 0 ]]; then 
     echo Sourcing wsl/clipboard.tmux >> ~/.config/tmux/test.log
